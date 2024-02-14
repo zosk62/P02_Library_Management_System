@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Employee</title>
+</head>
+<body>
+
+<h2>Update Employee</h2>
+
+<form th:action="@{/employee/update}" th:object="${employee}" method="post">
+  <input type="hidden" th:field="*{id}">
+  
+  <!-- Input fields for other properties -->
+  
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" th:field="*{firstName}" placeholder="First name를 입력해주세요.">
+
+  <label for="firstName">First Name:</label>
+  <input type="text" id="email" th:field="*{email}" placeholder="email를 입력해주세요.">
+
+  <!-- Add similar fields for lastName, email and other properties -->
+
+  <input type="submit" value="Update">
+</form>
+
+</body> 
+ </html> 
